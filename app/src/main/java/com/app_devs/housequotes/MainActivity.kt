@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.app_devs.housequotes.databinding.ActivityMainBinding
+import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         // If a LiveData is in one of the binding expressions and no LifecycleOwner is set,
         // the LiveData will not be observed and updates to it will not be propagated to the UI.
         binding.lifecycleOwner=this
+
 
 
     }

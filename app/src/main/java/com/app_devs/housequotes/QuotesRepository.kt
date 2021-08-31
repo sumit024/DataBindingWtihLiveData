@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import java.util.*
 
 object QuotesRepository {
+
     private val quotesList:List<String> = listOf(
     "I've found that when you want to know the truth about someone that " +
             "someone is probably the last person you should ask.",

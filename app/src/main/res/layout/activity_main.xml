@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         tools:context=".MainActivity">
 <!--Two way binding is here at this edit text -->
 <!--        <EditText-->
@@ -22,6 +21,14 @@
 <!--            android:layout_height="wrap_content"-->
 <!--            android:text="@={mainViewModel.quoteLiveData}"/>-->
 
+        <ImageView
+            android:id="@+id/displayHouse"
+            imageFromUrl="@{mainViewModel.url}"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30sp"
+            />
         <TextView
             android:id="@+id/quoteText"
             android:layout_width="wrap_content"
@@ -30,7 +37,7 @@
             android:fontFamily="cursive"
             android:textStyle="bold"
             android:gravity="center"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="50sp"
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:textSize="25sp" />
@@ -44,6 +51,7 @@
             android:fontFamily="cursive"
             android:textColor="@color/white"
             android:textSize="20sp"
+            android:layout_gravity="center"
             android:onClick="@{()->mainViewModel.nextQuote()}"
             android:id="@+id/nextQuoteBtn"
             android:layout_marginTop="40sp" />

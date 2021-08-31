@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.app_devs.housequotes.MainActivityViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".MainActivity">
+        
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={mainViewModel.quoteLiveData}"/>
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{mainViewModel.quoteLiveData}"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="25sp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_quote"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:fontFamily="cursive"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:onClick="@{()->mainViewModel.nextQuote()}"
+            android:id="@+id/nextQuoteBtn"
+            android:layout_marginTop="40sp" />
+    </LinearLayout>
+</layout>
